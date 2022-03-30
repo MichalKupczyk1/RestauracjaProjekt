@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ProjektTaiib.Models.Zamowienie>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <style>
+        table, td, th {
+            border: 1px solid;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Id stolika
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stolik.ileMiejsc)
+            </th>
+            <th>
+                Rezerwacja
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stolik.czyObsluzony)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stolik.id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stolik.ileMiejsc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Stolik.czyZajety)
+            </td>
+            <td>
+            @Html.DisplayFor(modelItem => item.Stolik.czyObsluzony)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+</body>
+</html>

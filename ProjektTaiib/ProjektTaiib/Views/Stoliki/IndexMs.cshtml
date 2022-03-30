@@ -1,0 +1,39 @@
+﻿@model ProjektTaiib.MS.Baza
+
+<h4>Stolik</h4>
+<hr />
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StolikMS.First().ileMiejsc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StolikMS.First().czyZajety)
+            </th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.StolikMS)
+        {
+            string styl = "background:yellow";
+            if (item.id == Model.ZaznaczonyId)
+                styl = "background:orange";
+        <tr style="@styl">
+            <td>
+                @Html.DisplayFor(modelItem => item.ileMiejsc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.czyZajety)
+            </td>
+            <td>
+                <a asp-action="IndexMS" asp-route-id="@item.id">Zaznacz</a>
+            </td>
+        </tr>
+        }
