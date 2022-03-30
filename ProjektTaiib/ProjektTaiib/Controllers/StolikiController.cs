@@ -24,10 +24,7 @@ namespace ProjektTaiib.Controllers
             Baza baza = new Baza();
             
             baza.StolikMS = _context.stolik.ToList();
-            try
-            {
-                baza.StolikMS.Find(s => s.id == id).czyZajety = true;
-            }
+            
             baza.ZaznaczonyId = id;
             return View(baza);
         }
