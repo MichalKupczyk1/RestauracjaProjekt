@@ -1,4 +1,5 @@
 ﻿using ProjektTaiib.Models;
+using ProjektTaiib.MS;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,47 +9,71 @@ namespace ProjektTaiib.Interfaces
 {
     public class KartaDanRepository : IKartaDanRepository
     {
+        public KartaDanRepository(Restauracja baza)
+        {
+            this.baza = baza;
+        }
+        private Restauracja baza { get; set; }
         public void addKartaDan(KartaDan kartaDan)
         {
-            throw new NotImplementedException();
+            baza.kartaDan.Add(kartaDan);
         }
 
         public bool deleteKartaDan(int id)
         {
-            throw new NotImplementedException();
+            KartaDan temp = getKartaDan(id);
+
+            if (temp != null)
+            {
+                baza.kartaDan.Remove(temp);
+                return true;
+            }
+            return false;
         }
 
         public KartaDan getKartaDan(int id)
         {
-            throw new NotImplementedException();
+            return baza.kartaDan.Where(e => e.id == id).FirstOrDefault();
         }
 
         public IEnumerable<KartaDan> GetKartyDan()
         {
-            throw new NotImplementedException();
+            return baza.kartaDan.ToList();
         }
     }
 
     public class KelnerRepository : IKelnerRepository
     {
+        public KelnerRepository(Restauracja baza)
+        {
+            this.baza = baza;
+        }
+        private Restauracja baza { get; set; }
         public void addKelner(Kelner kelner)
         {
-            throw new NotImplementedException();
+            baza.kelner.Add(kelner);
         }
 
         public bool deleteKelner(int id)
         {
-            throw new NotImplementedException();
+            Kelner temp = getKelner(id);
+
+            if (temp != null)
+            {
+                baza.kelner.Remove(temp);
+                return true;
+            }
+            return false;
         }
 
         public Kelner getKelner(int id)
         {
-            throw new NotImplementedException();
+            return baza.kelner.Where(e => e.id == id).FirstOrDefault();
         }
 
         public IEnumerable<Kelner> getKelnerzy()
         {
-            throw new NotImplementedException();
+            return baza.kelner.ToList();
         }
 
         public IEnumerable<Zamowienie> getZamowieniaKelnera(int kelnerId)
@@ -64,24 +89,36 @@ namespace ProjektTaiib.Interfaces
 
     public class StolikRepository : IStolikRepository
     {
+        public StolikRepository(Restauracja baza)
+        {
+            this.baza = baza;
+        }
+        private Restauracja baza { get; set; }
         public void addStolik(Stolik stolik)
         {
-            throw new NotImplementedException();
+            baza.stolik.Add(stolik);
         }
 
         public bool deleteStolik(int id)
-        {
-            throw new NotImplementedException();
+        { 
+            Stolik temp = getStolik(id);
+
+            if (temp != null)
+            {
+                baza.stolik.Remove(temp);
+                return true;
+            }
+            return false;
         }
 
         public Stolik getStolik(int id)
         {
-            throw new NotImplementedException();
+            return baza.stolik.Where(e => e.id == id).FirstOrDefault();
         }
 
         public IEnumerable<Stolik> getStoliki()
         {
-            throw new NotImplementedException();
+            return baza.stolik.ToList();
         }
 
         public IEnumerable<Zamowienie> getZamowieniaStolika(int stolikId)
@@ -97,24 +134,36 @@ namespace ProjektTaiib.Interfaces
 
     public class TypDaniaRepository : ITypDaniaRepository
     {
+        public TypDaniaRepository(Restauracja baza)
+        {
+            this.baza = baza;
+        }
+        private Restauracja baza { get; set; }
         public void addTypDania(TypDania typDania)
         {
-            throw new NotImplementedException();
+            baza.typDania.Add(typDania);
         }
 
         public bool deleteTypDania(int id)
         {
-            throw new NotImplementedException();
+            TypDania temp = getTypDania(id);
+
+            if (temp != null)
+            {
+                baza.typDania.Remove(temp);
+                return true;
+            }
+            return false;
         }
 
         public TypDania getTypDania(int id)
         {
-            throw new NotImplementedException();
+            return baza.typDania.Where(e => e.id == id).FirstOrDefault();
         }
 
         public IEnumerable<TypDania> getTypyDania()
         {
-            throw new NotImplementedException();
+            return baza.typDania.ToList();
         }
 
         public void przypiszDoKartyDan(int idTypu, int idKarty)
@@ -125,24 +174,37 @@ namespace ProjektTaiib.Interfaces
 
     public class ZamowienieRepository : IZamowienieRepository
     {
+        public ZamowienieRepository(Restauracja baza)
+        {
+            this.baza = baza;
+        }
+        private Restauracja baza { get; set; }
         public void addZamowienie(Zamowienie zamowienie)
         {
-            throw new NotImplementedException();
+            baza.zamowienie.Add(zamowienie);
         }
 
         public bool deleteZamowienie(int id)
         {
-            throw new NotImplementedException();
+
+            Zamowienie temp = getZamowienie(id);
+
+            if (temp != null)
+            {
+                baza.zamowienie.Remove(temp);
+                return true;
+            }
+            return false;
         }
 
         public IEnumerable<Zamowienie> getZamowienia()
         {
-            throw new NotImplementedException();
+            return baza.zamowienie.ToList();
         }
 
         public Zamowienie getZamowienie(int id)
         {
-            throw new NotImplementedException();
+            return baza.zamowienie.Where(e => e.id == id).FirstOrDefault();
         }
 
         public void przypiszZamowienieDoKartyDan(int idZamowienie, int idKartaDan)
