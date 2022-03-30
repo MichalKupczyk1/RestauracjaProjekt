@@ -41,6 +41,12 @@ namespace ProjektTaiib.Interfaces
     }
     public interface IZamowienieRepository
     {
-        
+        void addZamowienie(Zamowienie zamowienie);
+        bool deleteZamowienie(int id);
+        IEnumerable<Zamowienie> getZamowienia();
+        Zamowienie getZamowienie(int id);
+        void przypiszZamowienieDoStolika(int idZamowienie, int idStolik);
+        void przypiszZamowienieDoKelnera(int idZamowienie, int idKelner);
+        void przypiszZamowienieDoKartyDan(int idZamowienie, int idKartaDan);
     }
 }
