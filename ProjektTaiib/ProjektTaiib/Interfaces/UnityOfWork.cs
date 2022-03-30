@@ -22,7 +22,7 @@ namespace ProjektTaiib.Interfaces
         {
             get{
                 if(this._kelner == null){
-                    this._kelner = new KelnerRepository(Restauracja);
+                    this._kelner = new KelnerRepository(dbContext);
                 }
                 return this._kelner;
             }
@@ -34,7 +34,7 @@ namespace ProjektTaiib.Interfaces
             {
                 if (this._KartaDan == null)
                 {
-                    this._KartaDan = new KartaDanRepository(Restauracja);
+                    this._KartaDan = new KartaDanRepository(dbContext);
                 }
                 return this._KartaDan;
             }
@@ -46,7 +46,7 @@ namespace ProjektTaiib.Interfaces
             {
                 if (this._Stolik == null)
                 {
-                    this._Stolik = new IStolikRepository(Restauracja);
+                    this._Stolik = new StolikRepository(dbContext);
                 }
                 return this._Stolik;
             }
@@ -58,7 +58,7 @@ namespace ProjektTaiib.Interfaces
             {
                 if (this._TypDania == null)
                 {
-                    this._TypDania = new TypDaniaRepository(Restauracja);
+                    this._TypDania = new TypDaniaRepository(dbContext);
                 }
                 return this._TypDania;
             }
@@ -69,7 +69,7 @@ namespace ProjektTaiib.Interfaces
             {
                 if (this._Zamowienie == null)
                 {
-                    this._Zamowienie = new ZamowienieRepository(Restauracja);
+                    this._Zamowienie = new ZamowienieRepository(dbContext);
                 }
                 return this._Zamowienie;
             }
