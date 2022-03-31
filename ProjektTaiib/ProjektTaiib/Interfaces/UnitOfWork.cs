@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace ProjektTaiib.Interfaces
 {
-    public class UnityOfWork : IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly Restauracja dbContext;
-        UnityOfWork(Restauracja dbContext)
+        public UnitOfWork(Restauracja dbContext)
         {
             this.dbContext = dbContext;
         }
