@@ -78,12 +78,12 @@ namespace ProjektTaiib.Interfaces
 
         public IEnumerable<Zamowienie> getZamowieniaKelnera(int kelnerId)
         {
-            throw new NotImplementedException();
+            return baza.zamowienie.Where(e => e.id_kelner == kelnerId).ToList();
         }
 
         public void przypiszDoZamowienia(int idZamowienia, int idKelnera)
         {
-            throw new NotImplementedException();
+            baza.kelner.Where(e => e.id == idKelnera).FirstOrDefault().zamowienia.Add(baza.zamowienie.Where(e => e.id == idZamowienia).FirstOrDefault());
         }
     }
 
@@ -123,12 +123,12 @@ namespace ProjektTaiib.Interfaces
 
         public IEnumerable<Zamowienie> getZamowieniaStolika(int stolikId)
         {
-            throw new NotImplementedException();
+            return baza.stolik.Where(e => e.id == stolikId).FirstOrDefault().zamowienia;
         }
 
         public void przypiszDoZamowienia(int idZamowienia, int idStolika)
         {
-            throw new NotImplementedException();
+            baza.stolik.Where(e => e.id == idStolika).FirstOrDefault().zamowienia.Add(baza.zamowienie.Where(e => e.id == idZamowienia).FirstOrDefault());
         }
     }
 
@@ -168,7 +168,7 @@ namespace ProjektTaiib.Interfaces
 
         public void przypiszDoKartyDan(int idTypu, int idKarty)
         {
-            throw new NotImplementedException();
+            baza.kartaDan.Where(e => e.id == idKarty).FirstOrDefault().typDania = baza.typDania.Where(e => e.id == idTypu).FirstOrDefault();
         }
     }
 
@@ -209,17 +209,17 @@ namespace ProjektTaiib.Interfaces
 
         public void przypiszZamowienieDoKartyDan(int idZamowienie, int idKartaDan)
         {
-            throw new NotImplementedException();
+            baza.zamowienie.Where(e => e.id == idZamowienie).FirstOrDefault().kartaDan = baza.kartaDan.Where(e => e.id == idKartaDan).FirstOrDefault();
         }
 
         public void przypiszZamowienieDoKelnera(int idZamowienie, int idKelner)
         {
-            throw new NotImplementedException();
+            baza.kelner.Where(e => e.id == idKelner).FirstOrDefault().zamowienia.Add(baza.zamowienie.Where(e => e.id == idZamowienie).FirstOrDefault());
         }
 
         public void przypiszZamowienieDoStolika(int idZamowienie, int idStolik)
         {
-            throw new NotImplementedException();
+            baza.stolik.Where(e => e.id == idStolik).FirstOrDefault().zamowienia.Add(baza.zamowienie.Where(e => e.id == idZamowienie).FirstOrDefault());
         }
     }
 }
