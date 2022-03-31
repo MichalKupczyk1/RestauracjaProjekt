@@ -42,8 +42,9 @@ namespace ProjektTaiib.Interfaces
 
         public IEnumerable<KartaDan> GetKartyDan()
         {
+
             //tu dodaj mozliwosc zwrocenia listy w uow
-            return null;
+            return unitOfWork.kartaDan.GetKartyDan();
         }
     }
 

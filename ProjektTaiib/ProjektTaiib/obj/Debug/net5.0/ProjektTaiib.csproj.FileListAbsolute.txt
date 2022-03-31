@@ -312,3 +312,4 @@ C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.Views.pdb
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.csproj.CopyComplete
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.genruntimeconfig.cache
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\AutoMapper.dll

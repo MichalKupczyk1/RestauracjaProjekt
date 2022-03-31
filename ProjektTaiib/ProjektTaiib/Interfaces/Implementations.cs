@@ -1,4 +1,5 @@
-﻿using ProjektTaiib.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using ProjektTaiib.Models;
 using ProjektTaiib.MS;
 using System;
 using System.Collections.Generic;
@@ -201,7 +202,7 @@ namespace ProjektTaiib.Interfaces
         {
             return baza.zamowienie.ToList();
         }
-
+        
         public Zamowienie getZamowienie(int id)
         {
             return baza.zamowienie.Where(e => e.id == id).FirstOrDefault();
