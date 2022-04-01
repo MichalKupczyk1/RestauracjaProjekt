@@ -7,11 +7,11 @@ namespace ProjektTaiib.Interfaces
 {
     public interface IUnitOfWork
     {
-        IKelnerRepository kelner { get; }
-        IKartaDanRepository kartaDan  { get; }
-        IStolikRepository stolik{ get; }
-        ITypDaniaRepository typDania { get; }
-        IZamowienieRepository zamowienie { get; }
+        IKelnerRepository Kelner { get; }
+        IKartaDanRepository KartaDan  { get; }
+        IStolikRepository Stolik{ get; }
+        ITypDaniaRepository TypDania { get; }
+        IZamowienieRepository Zamowienie { get; }
         Task<int> CompleteAsync();
         int Complete();
     }

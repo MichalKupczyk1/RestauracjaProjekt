@@ -313,3 +313,8 @@ C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.csproj.CopyComplete
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.genruntimeconfig.cache
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\AutoMapper.dll
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\Microsoft.Extensions.Options.dll
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\Microsoft.Extensions.Primitives.dll
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\System.Runtime.CompilerServices.Unsafe.dll

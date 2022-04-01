@@ -12,16 +12,15 @@ using ProjektTaiib.Models;
 
 namespace ProjektTaiib.Controllers
 {
-    [Route("api/Zamowienie")]
+    [Route("Zamowienie")]
     [ApiController]
-   
-
     public class ZamowienieController:ControllerBase
     {
+       
         private readonly IMapper mapper;
         private readonly IZamowienie blZamowienie;
-        
-        public ZamowienieController(IMapper mapper,IZamowienie zamowienie)
+
+        public ZamowienieController( IMapper mapper,BLZamowienie zamowienie)
         {
             this.mapper = mapper;
             this.blZamowienie = zamowienie;
@@ -30,17 +29,20 @@ namespace ProjektTaiib.Controllers
 
         // GET: api/Zamowienie
         [HttpGet]
-        public IEnumerable<Zamowienie> Get()
+        public IEnumerable<zamowienieTest> Get()
         {
             var zamowienia = blZamowienie.getZamowienia();
-            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<Zamowienie>>(zamowienia);
+            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<zamowienieTest>>(zamowienia);
+            /* 
+             *  mapperuje z Zamowienie do zamowienieTest 
+             */
         }
         // GET: api/Zamowienie/5
         [HttpGet("{id}")]
-        public IEnumerable<Zamowienie> Get(int ZamowienieId)
+        public IEnumerable<zamowienieTest> Get(int ZamowienieId)
         {
             var zamowienia = blZamowienie.getZamowienia();
-            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<Zamowienie>>(zamowienia);
+            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<zamowienieTest>>(zamowienia);
         }
 
         // POST: api/Zamowienie

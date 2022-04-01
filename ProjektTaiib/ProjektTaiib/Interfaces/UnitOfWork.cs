@@ -18,7 +18,7 @@ namespace ProjektTaiib.Interfaces
         private IStolikRepository _Stolik;
         private ITypDaniaRepository _TypDania;
         private IZamowienieRepository _Zamowienie;
-        public IKelnerRepository kelner
+        public IKelnerRepository Kelner
         {
             get{
                 if(this._kelner == null){
@@ -28,7 +28,7 @@ namespace ProjektTaiib.Interfaces
             }
         }
 
-        public IKartaDanRepository kartaDan
+        public IKartaDanRepository KartaDan
         {
             get
             {
@@ -40,7 +40,7 @@ namespace ProjektTaiib.Interfaces
             }
         }
 
-        public IStolikRepository stolik
+        public IStolikRepository Stolik
         {
             get
             {
@@ -52,7 +52,7 @@ namespace ProjektTaiib.Interfaces
             }
         }
 
-        public ITypDaniaRepository typDania
+        public ITypDaniaRepository TypDania
         {
             get
             {
@@ -63,7 +63,7 @@ namespace ProjektTaiib.Interfaces
                 return this._TypDania;
             }
         }
-        public IZamowienieRepository zamowienie
+        public IZamowienieRepository Zamowienie
         {
             get
             {

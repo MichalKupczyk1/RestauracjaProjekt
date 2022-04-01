@@ -10,7 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using AutoMapper;
 namespace ProjektTaiib
 {
     public class Startup
@@ -25,14 +25,30 @@ namespace ProjektTaiib
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
-            //services.AddScoped<IZamowienie, BLZamowienie>();
-           // services.AddScoped<IKartaDan, BLKartaDan>();
-           // services.AddScoped<IKelner, BLKelner>();
-            //services.AddScoped<IStolik, BLStolik>();
-           // services.AddScoped<ITypDania, BLTypDania>();
-           // services.AddScoped<IUnitOfWork, UnitOfWork>();
+            UnitOfWork uow = new UnitOfWork(new Restauracja());
+            //services.AddDbContext<Restauracja>();
+            services.AddTransient<BLZamowienie>(_ => new BLZamowienie(uow));
+            /* 
+             przez problemy konstruktora, konstruktor blZamowienie szuka UOW, dostaje restauracje i szaleje dla tego dodaje przez konstruktor i lambde
+             */
+
+            //services.AddTransient<Zamowienie>();
+
+            // services.AddScoped<IZamowienie, BLZamowienie>();
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
             services.AddControllersWithViews();
+            //services.AddTransient<Zamowienie>(new Zamowienie());
+           
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+            /* 
+             *   tworze mappera do servicu 
+             */
+            //services.AddScoped<IKartaDan, BLKartaDan>();
+            // services.AddScoped<IKelner, BLKelner>();
+            //services.AddScoped<IStolik, BLStolik>();
+            // services.AddScoped<ITypDania, BLTypDania>();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

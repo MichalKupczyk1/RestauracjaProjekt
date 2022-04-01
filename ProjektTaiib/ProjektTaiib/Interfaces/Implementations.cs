@@ -175,11 +175,12 @@ namespace ProjektTaiib.Interfaces
 
     public class ZamowienieRepository : IZamowienieRepository
     {
+        private readonly Restauracja baza;
         public ZamowienieRepository(Restauracja baza)
         {
             this.baza = baza;
         }
-        private Restauracja baza { get; set; }
+        
         public void addZamowienie(Zamowienie zamowienie)
         {
             baza.zamowienie.Add(zamowienie);
