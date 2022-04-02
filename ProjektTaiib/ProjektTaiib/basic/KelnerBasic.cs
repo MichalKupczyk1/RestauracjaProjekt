@@ -12,6 +12,5 @@ namespace ProjektTaiib.basic
         public int id { set; get; }
         public string imie { set; get; }
         public string nazwisko { set; get; }
-     
     }
 }

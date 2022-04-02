@@ -14,6 +14,10 @@ namespace ProjektTaiib.Mapper
             CreateMap<Zamowienie, ZamowienieBasic>().ForMember(dest => dest.id_kelner, opt => opt.MapFrom(src => src.id_kelner))
                 .ForMember(dest => dest.id, opt => opt.MapFrom(src => src.id));
             CreateMap<Kelner, KelnerBasic>();
+            CreateMap<Stolik, StolikBasic>();
+            CreateMap<TypDania,TypDaniaBasic>();
+            CreateMap<KartaDan,KartaDanBasic>();
+         
         }
     }
 }

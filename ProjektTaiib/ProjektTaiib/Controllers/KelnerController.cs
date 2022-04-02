@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ProjektTaiib.Controllers
 {
-    [Route("Kelnerzy")]
+    [Route("Kelner")]
     [ApiController]
     public class KelnerController : ControllerBase
     {
@@ -25,7 +25,7 @@ namespace ProjektTaiib.Controllers
         }
 
 
-        // GET: Zamowienie
+        // GET: Kelner
         [HttpGet]
         public IEnumerable<KelnerBasic> Get()
         {
@@ -35,23 +35,26 @@ namespace ProjektTaiib.Controllers
              *  mapperuje z Zamowienie do zamowienieTest 
              */
         }
-        // GET: Zamowienie/5
-        [HttpGet("{id}")]
-        public IEnumerable<ZamowienieBasic> Get(int kelnerId)
+        // GET: Kelner/5
+        [HttpGet("{kelnerId}")]
+        public KelnerBasic Get(int kelnerId)
         {
-            var kelnerzy = blKelner.getZamowieniaKelnera(kelnerId);
-            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<ZamowienieBasic>>(kelnerzy);
+             var kelnerzy = blKelner.getKelner(kelnerId);
+            return mapper.Map<Kelner, KelnerBasic>(kelnerzy);
+
+            // var kelnerzy = blKelner.getZamowieniaKelnera(kelnerId);
+            //return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<ZamowienieBasic>>(kelnerzy);
         }
 
-        // POST: api/Zamowienie
+        // POST: api/Kelner
         [HttpPost]
-        public void Post([FromBody] Zamowienie zamowienie)
+        public void Post([FromBody] Kelner kelner)
         {
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{kelnerId}")]
+        public void Delete(int kelnerId)
         {
         }
     }

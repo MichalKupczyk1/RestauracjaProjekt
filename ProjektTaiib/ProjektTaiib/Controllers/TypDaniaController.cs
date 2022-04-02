@@ -10,32 +10,44 @@ using System.Threading.Tasks;
 
 namespace ProjektTaiib.Controllers
 {
-    [Route("TypyDan")]
+    [Route("TypDania")]
     [ApiController]
     public class TypDaniaController : ControllerBase
     {
 
         private readonly IMapper mapper;
-        private readonly ITypDania typDania;
+        private readonly ITypDania blTypDania;
 
         public TypDaniaController(IMapper mapper, BLTypDania typDania)
         {
             this.mapper = mapper;
-            this.typDania = typDania;
+            this.blTypDania = typDania;
         }
 
 
-        // GET: Zamowienie/5
+        [HttpGet]
+        public IEnumerable<TypDaniaBasic> Get()
+        {
+            var TypDania = blTypDania.getTypyDania();
+            return mapper.Map<IEnumerable<TypDania>, IEnumerable<TypDaniaBasic>>(TypDania);
+        }
+       
+        [HttpGet("{typDaniaId}")]
+        public TypDaniaBasic Get(int typDaniaId)
+        {
+            var typDania = blTypDania.getTypDania(typDaniaId);
+            return mapper.Map<TypDania,TypDaniaBasic>(typDania);
+        }
 
-        // POST: api/Zamowienie
+        // POST: api/TypDania
         [HttpPost]
-        public void Post([FromBody] Zamowienie zamowienie)
+        public void Post([FromBody] TypDania typDania)
         {
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{typDaniaId}")]
+        public void Delete(int typDaniaId)
         {
         }
     }

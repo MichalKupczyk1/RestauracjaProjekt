@@ -27,8 +27,7 @@ namespace ProjektTaiib
         {
             services.AddDbContext<Restauracja>();
 
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
-            //services.AddScoped<IZamowienie, BLZamowienie>();
+           
             Restauracja r = new Restauracja();
             services.AddTransient<UnitOfWork>(_ => new UnitOfWork(r));
             UnitOfWork uow = new UnitOfWork(r);
@@ -37,20 +36,30 @@ namespace ProjektTaiib
             //services.AddDbContext<Restauracja>();
             services.AddTransient<BLZamowienie>(_ => new BLZamowienie(uow));
             services.AddTransient<BLKelner>(_ => new BLKelner(uow));
-            
+            services.AddTransient<BLKartaDan>(_ => new BLKartaDan(uow));
+            services.AddTransient<BLStolik>(_ => new BLStolik(uow));
+            services.AddTransient<BLTypDania>(_ => new BLTypDania(uow));
+
+
+            services.AddControllersWithViews();
+            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
             /* 
    
              przez problemy konstruktora, konstruktor blZamowienie szuka UOW, dostaje restauracje i szaleje dla tego dodaje przez konstruktor i lambde
              */
 
+
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //services.AddScoped<IZamowienie, BLZamowienie>();
             //services.AddTransient<Zamowienie>();
 
             // services.AddScoped<IZamowienie, BLZamowienie>();
 
-            services.AddControllersWithViews();
+
             //services.AddTransient<Zamowienie>(new Zamowienie());
-           
-            services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+
+
             /* 
              *   tworze mappera do servicu 
              */

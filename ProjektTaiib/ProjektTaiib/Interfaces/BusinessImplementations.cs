@@ -34,8 +34,9 @@ namespace ProjektTaiib.Interfaces
 
         public KartaDan getKartaDan(int id)
         {
+            Console.WriteLine("aaaaaaaaaaaaaa"+id);
             if (id <= default(int))
-                throw new InvalidOperationException("Podane id nie jest poprawne");
+                throw new InvalidOperationException("Podane id nie jest poprawne " + id);
 
             return unitOfWork.KartaDan.getKartaDan(id);
         }

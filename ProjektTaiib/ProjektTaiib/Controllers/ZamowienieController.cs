@@ -53,7 +53,7 @@ namespace ProjektTaiib.Controllers
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{ZamowienieId}")]
         public void Delete(int id)
         {
         }

@@ -10,32 +10,45 @@ using System.Threading.Tasks;
 
 namespace ProjektTaiib.Controllers
 {
-    [Route("TypyDan")]
+    [Route("Stolik")]
     [ApiController]
     public class StolikController : ControllerBase
     {
 
         private readonly IMapper mapper;
-        private readonly IStolik stolik;
+        private readonly IStolik blStolik;
 
         public StolikController(IMapper mapper, BLStolik stolik)
         {
             this.mapper = mapper;
-            this.stolik = stolik;
+            this.blStolik = stolik;
         }
 
 
-        // GET: Zamowienie/5
+        [HttpGet]
+        public IEnumerable<StolikBasic> Get()
+        {
+            var stolik = blStolik.getStoliki();
+            return mapper.Map<IEnumerable<Stolik>, IEnumerable<StolikBasic>>(stolik);
+   
+        }
+        // GET: Stolik/5
+        [HttpGet("{stolikId}")]
+        public StolikBasic Get(int stolikId)
+        {
+            var stolik = blStolik.getStolik(stolikId);
+            return mapper.Map<Stolik,StolikBasic>(stolik);
+        }
 
-        // POST: api/Zamowienie
+        // POST: api/Stolik
         [HttpPost]
-        public void Post([FromBody] Zamowienie zamowienie)
+        public void Post([FromBody] Stolik stolik)
         {
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
-        public void Delete(int id)
+        [HttpDelete("{stolikId}")]
+        public void Delete(int stolikId)
         {
         }
     }
