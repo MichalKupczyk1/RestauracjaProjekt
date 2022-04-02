@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjektTaiib.Interfaces
 {
-    class BLKartaDan : IKartaDan
+    public class BLKartaDan : IKartaDan
     {
         private UnitOfWork unitOfWork;
 
@@ -113,7 +113,7 @@ namespace ProjektTaiib.Interfaces
         }
     }
 
-    class BLStolik : IStolik
+    public class BLStolik : IStolik
     {
         private UnitOfWork unitOfWork;
 
@@ -176,7 +176,7 @@ namespace ProjektTaiib.Interfaces
         }
     }
 
-    class BLTypDania : ITypDania
+    public class BLTypDania : ITypDania
     {
         private UnitOfWork unitOfWork;
 
