@@ -25,6 +25,7 @@ namespace ProjektTaiib
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<Restauracja>();
             Restauracja r = new Restauracja();
             services.AddTransient<UnitOfWork>(_ => new UnitOfWork(r));
             UnitOfWork uow = new UnitOfWork(r);
