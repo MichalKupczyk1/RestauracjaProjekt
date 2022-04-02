@@ -48,8 +48,8 @@ namespace ProjektTaiib.Interfaces
         }
     }
 
-    class BLKelner : IKelner
-    {
+    public class BLKelner : IKelner
+     {
         private UnitOfWork unitOfWork;
 
         public BLKelner(UnitOfWork uow)
@@ -89,8 +89,8 @@ namespace ProjektTaiib.Interfaces
 
         public IEnumerable<Zamowienie> getZamowieniaKelnera(int kelnerId)
         {
-            if (kelnerId <= default(int))
-                throw new InvalidOperationException("Podane id jest nieprawidłowe");
+          //  if (kelnerId <= default(int))
+         //       throw new InvalidOperationException("Podane id jest nieprawidłowe");
 
             if(unitOfWork.Kelner.getKelner(kelnerId)==null)
                 throw new InvalidOperationException("Dany kelner nie istnieje");

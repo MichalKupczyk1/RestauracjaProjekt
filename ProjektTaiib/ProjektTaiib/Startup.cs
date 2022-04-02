@@ -25,9 +25,15 @@ namespace ProjektTaiib
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            UnitOfWork uow = new UnitOfWork(new Restauracja());
+            Restauracja r = new Restauracja();
+            services.AddTransient<UnitOfWork>(_ => new UnitOfWork(r));
+            UnitOfWork uow = new UnitOfWork(r);
+
+            Console.WriteLine(r.kelner.Where(e => e.id == 1));
             //services.AddDbContext<Restauracja>();
             services.AddTransient<BLZamowienie>(_ => new BLZamowienie(uow));
+            services.AddTransient<BLKelner>(_ => new BLKelner(uow));
+            
             /* 
              przez problemy konstruktora, konstruktor blZamowienie szuka UOW, dostaje restauracje i szaleje dla tego dodaje przez konstruktor i lambde
              */
@@ -35,7 +41,7 @@ namespace ProjektTaiib
             //services.AddTransient<Zamowienie>();
 
             // services.AddScoped<IZamowienie, BLZamowienie>();
-            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+
             services.AddControllersWithViews();
             //services.AddTransient<Zamowienie>(new Zamowienie());
            

@@ -6,6 +6,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using ProjektTaiib.basic;
 using ProjektTaiib.Interfaces;
 using ProjektTaiib.Models;
 
@@ -29,20 +30,20 @@ namespace ProjektTaiib.Controllers
 
         // GET: api/Zamowienie
         [HttpGet]
-        public IEnumerable<zamowienieTest> Get()
+        public IEnumerable<ZamowienieBasic> Get()
         {
             var zamowienia = blZamowienie.getZamowienia();
-            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<zamowienieTest>>(zamowienia);
+            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<ZamowienieBasic>>(zamowienia);
             /* 
              *  mapperuje z Zamowienie do zamowienieTest 
              */
         }
         // GET: api/Zamowienie/5
         [HttpGet("{id}")]
-        public IEnumerable<zamowienieTest> Get(int ZamowienieId)
+        public IEnumerable<ZamowienieBasic> Get(int ZamowienieId)
         {
             var zamowienia = blZamowienie.getZamowienia();
-            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<zamowienieTest>>(zamowienia);
+            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<ZamowienieBasic>>(zamowienia);
         }
 
         // POST: api/Zamowienie

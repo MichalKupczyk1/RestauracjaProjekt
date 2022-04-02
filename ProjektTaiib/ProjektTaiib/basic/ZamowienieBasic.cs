@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ProjektTaiib.Models
+namespace ProjektTaiib.basic
 {
-    public class zamowienieTest
+    public class ZamowienieBasic
     {
           public int id { set; get; }
           public int idKelner { set; get; }
