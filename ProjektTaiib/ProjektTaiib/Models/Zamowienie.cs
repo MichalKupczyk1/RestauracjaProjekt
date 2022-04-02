@@ -24,8 +24,6 @@ namespace ProjektTaiib.Models
         [ForeignKey(nameof(id_kelner))]
         public Kelner kelner { set; get; }
 
-
-        
         [Column(TypeName ="Date")]
         public DateTime? data_zam { set; get; }
     }
