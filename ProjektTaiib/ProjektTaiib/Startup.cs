@@ -26,6 +26,9 @@ namespace ProjektTaiib
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<Restauracja>();
+
+            //services.AddScoped<IUnitOfWork, UnitOfWork>();
+            //services.AddScoped<IZamowienie, BLZamowienie>();
             Restauracja r = new Restauracja();
             services.AddTransient<UnitOfWork>(_ => new UnitOfWork(r));
             UnitOfWork uow = new UnitOfWork(r);
@@ -36,6 +39,7 @@ namespace ProjektTaiib
             services.AddTransient<BLKelner>(_ => new BLKelner(uow));
             
             /* 
+   
              przez problemy konstruktora, konstruktor blZamowienie szuka UOW, dostaje restauracje i szaleje dla tego dodaje przez konstruktor i lambde
              */
 

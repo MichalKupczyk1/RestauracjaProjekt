@@ -10,8 +10,8 @@ namespace ProjektTaiib.MS
     {
 
         public List<Stolik> StolikMS { get; set; }
-        
+
         public int ZaznaczonyId { get; set; }
-     
+
     }
 }

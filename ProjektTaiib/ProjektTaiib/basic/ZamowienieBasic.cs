@@ -10,11 +10,11 @@ namespace ProjektTaiib.basic
     {
         public int id { set; get; }
         public int id_stolik { set; get; }
-        public Stolik Stolik { set; get; }
+  
         public int id_kartaDan { set; get; }
-        public KartaDan kartaDan { set; get; }
+      
         public int id_kelner { set; get; }
-        public Kelner kelner { set; get; }
+      
         public DateTime? data_zam { set; get; }
     }
 }

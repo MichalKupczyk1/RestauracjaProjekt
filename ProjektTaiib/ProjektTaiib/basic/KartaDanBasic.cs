@@ -11,8 +11,8 @@ namespace ProjektTaiib.basic
         public int id { set; get; }
         public string nazwaDania { set; get; }
         public float cena { set; get; }
-        public List<Zamowienie> zamowienia { get; set; }
+      
         public int id_typDania { set; get; }
-        public TypDania typDania { set; get; }
+     
     }
 }

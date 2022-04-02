@@ -10,6 +10,6 @@ namespace ProjektTaiib.basic
     {
         public int id { set; get; }
         public string nazwaTypu { set; get; }
-        public List<KartaDan> Dania { get; set; }
+     
     }
 }

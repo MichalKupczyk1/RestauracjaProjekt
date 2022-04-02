@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using ProjektTaiib.Models;
-using ProjektTaiib.MS;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

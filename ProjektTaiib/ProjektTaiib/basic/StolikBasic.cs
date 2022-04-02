@@ -12,6 +12,6 @@ namespace ProjektTaiib.basic
         public int ileMiejsc { set; get; }
         public bool czyZajety { set; get; }
         public bool czyObsluzony { set; get; }
-        public List<Zamowienie> zamowienia { get; set; }
+      
     }
 }

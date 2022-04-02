@@ -13,7 +13,7 @@ namespace ProjektTaiib.Mapper
         public AutoMapperProfile() {
             CreateMap<Zamowienie, ZamowienieBasic>().ForMember(dest => dest.id_kelner, opt => opt.MapFrom(src => src.id_kelner))
                 .ForMember(dest => dest.id, opt => opt.MapFrom(src => src.id));
-            CreateMap<Kelner, KelnerBasic>().ForMember(dest=>dest.zamowienia,opt => opt.MapFrom(src=>src.zamowienia));
+            CreateMap<Kelner, KelnerBasic>();
         }
     }
 }

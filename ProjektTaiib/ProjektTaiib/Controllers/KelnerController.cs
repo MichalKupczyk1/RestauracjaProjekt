@@ -25,7 +25,7 @@ namespace ProjektTaiib.Controllers
         }
 
 
-        // GET: api/Zamowienie
+        // GET: Zamowienie
         [HttpGet]
         public IEnumerable<KelnerBasic> Get()
         {
@@ -35,7 +35,7 @@ namespace ProjektTaiib.Controllers
              *  mapperuje z Zamowienie do zamowienieTest 
              */
         }
-        // GET: api/Zamowienie/5
+        // GET: Zamowienie/5
         [HttpGet("{id}")]
         public IEnumerable<ZamowienieBasic> Get(int kelnerId)
         {
