@@ -39,11 +39,11 @@ namespace ProjektTaiib.Controllers
              */
         }
         // GET: api/Zamowienie/5
-        [HttpGet("{id}")]
-        public IEnumerable<ZamowienieBasic> Get(int ZamowienieId)
+        [HttpGet("{ZamowienieId}")]
+        public ZamowienieBasic Get(int ZamowienieId)
         {
-            var zamowienia = blZamowienie.getZamowienia();
-            return mapper.Map<IEnumerable<Zamowienie>, IEnumerable<ZamowienieBasic>>(zamowienia);
+            var zamowienia = blZamowienie.getZamowienie(ZamowienieId);
+            return mapper.Map<Zamowienie,ZamowienieBasic>(zamowienia);
         }
 
         // POST: api/Zamowienie

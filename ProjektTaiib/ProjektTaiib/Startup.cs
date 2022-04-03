@@ -32,7 +32,7 @@ namespace ProjektTaiib
             services.AddTransient<UnitOfWork>(_ => new UnitOfWork(r));
             UnitOfWork uow = new UnitOfWork(r);
 
-            Console.WriteLine(r.kelner.Where(e => e.id == 1));
+      
             //services.AddDbContext<Restauracja>();
             services.AddTransient<BLZamowienie>(_ => new BLZamowienie(uow));
             services.AddTransient<BLKelner>(_ => new BLKelner(uow));
