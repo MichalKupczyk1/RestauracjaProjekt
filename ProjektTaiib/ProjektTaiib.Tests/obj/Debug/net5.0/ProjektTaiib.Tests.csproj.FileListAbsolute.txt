@@ -219,3 +219,5 @@ C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tes
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\obj\Debug\net5.0\ref\ProjektTaiib.Tests.dll
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\obj\Debug\net5.0\ProjektTaiib.Tests.pdb
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\obj\Debug\net5.0\ProjektTaiib.Tests.genruntimeconfig.cache
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\bin\Debug\net5.0\Castle.Core.dll
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\bin\Debug\net5.0\Moq.dll
