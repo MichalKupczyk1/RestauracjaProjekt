@@ -155,7 +155,6 @@ C:\Users\Graca\source\repos\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\Razor\Vie
 C:\Users\Graca\source\repos\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\Razor\Views\Stoliki\Edit.cshtml.g.cs
 C:\Users\Graca\source\repos\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\Razor\Views\Stoliki\Index.cshtml.g.cs
 C:\Users\Graca\source\repos\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\Razor\Views\Stoliki\IndexMs.cshtml.g.cs
-C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.csprojAssemblyReference.cache
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.AssemblyInfoInputs.cache
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.AssemblyInfo.cs
@@ -481,3 +480,4 @@ C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\ob
 C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.Views.pdb
 C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.csproj.CopyComplete
 C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.genruntimeconfig.cache
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.csproj.AssemblyReference.cache

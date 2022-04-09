@@ -12,7 +12,10 @@ namespace ProjektTaiib.Interfaces
 
         public BLKartaDan(UnitOfWork uow)
         {
-            this.unitOfWork = uow;
+            if (uow != null)
+                this.unitOfWork = uow;
+            else
+                throw new ArgumentNullException(nameof(uow));
         }
         public void addKartaDan(KartaDan kartaDan)
         {

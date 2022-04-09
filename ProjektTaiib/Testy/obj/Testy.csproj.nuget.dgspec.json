@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj": {}
+    "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\Testy\\Testy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj": {
+    "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\Testy\\Testy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj",
-        "projectName": "ProjektTaiib",
-        "projectPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj",
+        "projectUniqueName": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\Testy\\Testy.csproj",
+        "projectName": "Testy",
+        "projectPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\Testy\\Testy.csproj",
         "packagesPath": "C:\\Users\\Graca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\obj\\",
+        "outputPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\Testy\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Graca\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,31 +40,25 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "AutoMapper": {
+            "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[11.0.1, )"
+              "version": "[16.9.4, )"
             },
-            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
-              "target": "Package",
-              "version": "[11.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[5.0.15, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[5.0.15, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
+            "coverlet.collector": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.15, )"
+              "version": "[3.0.2, )"
             },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+            "xunit": {
               "target": "Package",
-              "version": "[5.0.2, )"
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
             }
           },
           "imports": [
@@ -78,9 +72,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

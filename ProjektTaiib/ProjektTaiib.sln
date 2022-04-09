@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31205.134
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektTaiib", "ProjektTaiib\ProjektTaiib.csproj", "{BB7985E2-65EE-4E46-826A-1FB15F70EB8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjektTaiib", "ProjektTaiib\ProjektTaiib.csproj", "{BB7985E2-65EE-4E46-826A-1FB15F70EB8A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektTaiib.Tests", "ProjektTaiib.Tests\ProjektTaiib.Tests.csproj", "{E4F41222-C1A0-4B48-A768-27E1FDF7F859}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BB7985E2-65EE-4E46-826A-1FB15F70EB8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB7985E2-65EE-4E46-826A-1FB15F70EB8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB7985E2-65EE-4E46-826A-1FB15F70EB8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4F41222-C1A0-4B48-A768-27E1FDF7F859}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4F41222-C1A0-4B48-A768-27E1FDF7F859}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4F41222-C1A0-4B48-A768-27E1FDF7F859}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4F41222-C1A0-4B48-A768-27E1FDF7F859}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
