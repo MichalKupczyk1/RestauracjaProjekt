@@ -8,9 +8,9 @@ namespace ProjektTaiib.Interfaces
 {
     public class BLKartaDan : IKartaDan
     {
-        private UnitOfWork unitOfWork;
+        private IUnitOfWork unitOfWork;
 
-        public BLKartaDan(UnitOfWork uow)
+        public BLKartaDan(IUnitOfWork uow)
         {
             if (uow != null)
                 this.unitOfWork = uow;
@@ -37,7 +37,6 @@ namespace ProjektTaiib.Interfaces
 
         public KartaDan getKartaDan(int id)
         {
-            Console.WriteLine("aaaaaaaaaaaaaa"+id);
             if (id <= default(int))
                 throw new InvalidOperationException("Podane id nie jest poprawne " + id);
 
