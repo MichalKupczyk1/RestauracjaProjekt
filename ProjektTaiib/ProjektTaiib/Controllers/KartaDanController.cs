@@ -38,8 +38,9 @@ namespace ProjektTaiib.Controllers
         [HttpGet("{kartaDanId}")]
         public KartaDanBasic Get(int kartaDanId)
         {
-            var kartaDan = BLKartaDan.getKartaDan(kartaDanId);
-            return mapper.Map<KartaDan, KartaDanBasic>(kartaDan);
+                var kartaDan = BLKartaDan.getKartaDan(kartaDanId);
+                return mapper.Map<KartaDan, KartaDanBasic>(kartaDan);
+           
         }
 
 
