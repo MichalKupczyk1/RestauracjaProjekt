@@ -10078,19 +10078,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Graca\\.nuget\\packages\\": {}
+    "C:\\Users\\Michal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib.Tests\\ProjektTaiib.Tests.csproj",
+      "projectUniqueName": "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib.Tests\\ProjektTaiib.Tests.csproj",
       "projectName": "ProjektTaiib.Tests",
-      "projectPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib.Tests\\ProjektTaiib.Tests.csproj",
-      "packagesPath": "C:\\Users\\Graca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib.Tests\\obj\\",
+      "projectPath": "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib.Tests\\ProjektTaiib.Tests.csproj",
+      "packagesPath": "C:\\Users\\Michal\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib.Tests\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Graca\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Michal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -10104,8 +10104,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj": {
-              "projectPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj"
+            "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj": {
+              "projectPath": "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj"
             }
           }
         }
@@ -10160,7 +10160,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
