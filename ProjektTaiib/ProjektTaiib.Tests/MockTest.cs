@@ -41,12 +41,12 @@ namespace ProjektTaiib.Tests
             var uowKelner = Mock.Of<IUnitOfWork>(c => c.Kelner == mockKelner);
             Assert.Equal("Kowalski", uowKelner.Kelner.getKelner(1).nazwisko);
 
-            var mockStolik = Mock.Of<IStolikRepository>(c => c.deleteStolik(1)==true);
+            var mockStolik = Mock.Of<IStolikRepository>(c => c.deleteStolik(1) == true);
             var uowStolik = Mock.Of<IUnitOfWork>(c => c.Stolik == mockStolik);
-            Assert.Equal(true,uowStolik.Stolik.deleteStolik(1));
+            Assert.Equal(true, uowStolik.Stolik.deleteStolik(1));
 
-            var mockZamowienie = Mock.Of<IZamowienieRepository>(c => c.getZamowienie(1) == new Zamowienie() { id = 1 }) ;
-            var uowZamowienie = Mock.Of<IUnitOfWork>(c => c.Zamowienie==mockZamowienie);
+            var mockZamowienie = Mock.Of<IZamowienieRepository>(c => c.getZamowienie(1) == new Zamowienie() { id = 1 });
+            var uowZamowienie = Mock.Of<IUnitOfWork>(c => c.Zamowienie == mockZamowienie);
             Assert.Equal(1, uowZamowienie.Zamowienie.getZamowienie(1).id);
         }
     }
