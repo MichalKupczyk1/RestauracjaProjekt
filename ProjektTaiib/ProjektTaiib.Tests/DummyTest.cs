@@ -11,7 +11,7 @@ namespace ProjektTaiib.Tests
     public class DummyTest
     {
         [Fact]
-        public void BLKartaDan_null_konstruktor() {
+        public void BLKartaDanNullKonstruktor() {
             UnitOfWork uow = null;
            Assert.Throws<ArgumentNullException>(() => new BLKartaDan(uow));
         }

@@ -14,7 +14,7 @@ namespace ProjektTaiib.Tests
    public class FakeTest
     {
         [Fact]
-        public void Test_add() {
+        public void fakeTestAddKartaDanShouldBeEqual() {
             var kartaDan = new FakeKartaDanRepository();
             kartaDan.addKartaDan(new KartaDan() {cena = 100, id_typDania=1, nazwaDania = "ziemniaki" });
             kartaDan.addKartaDan(new KartaDan() {cena = 100, id_typDania=1, nazwaDania = "zupa" });

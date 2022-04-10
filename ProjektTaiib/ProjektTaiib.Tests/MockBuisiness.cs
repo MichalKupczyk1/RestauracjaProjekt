@@ -20,7 +20,7 @@ namespace ProjektTaiib.Tests
 
      
         [Fact]
-        public void Test_Buisiness_BLKartaDan()
+        public void testBusinessKartaDanShouldBeEqual()
         { 
             var mockcos = Mock.Of<IKartaDanRepository>(c => c.getKartaDan(1).nazwaDania == "test");
             var uow = Mock.Of<IUnitOfWork>(c => c.KartaDan == mockcos);
@@ -28,7 +28,7 @@ namespace ProjektTaiib.Tests
 
         }
         [Fact]
-        public void Test_Buisiness_BLKartaDan2()
+        public void testBusinessKartaDanShouldBeEqualAnotherWayOfDoingIt()
         {
             var repoMock = new Mock<IUnitOfWork>();
             repoMock.Setup(r => r.KartaDan.getKartaDan(10)).Returns(new KartaDan { id = 10, id_typDania = 1, nazwaDania = "MockTestNazwa", cena = 100 });

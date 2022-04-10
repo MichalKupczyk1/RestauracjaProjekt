@@ -12,7 +12,7 @@ namespace ProjektTaiib.Tests
     public class KelnerStubTest
     {
         [Fact]
-        public void test()
+        public void checkingIfKelnerGotDeleted()
         {
             var kelner = Mock.Of<IKelnerRepository>(c => c.deleteKelner(1)==true);
             var validator = new KelnerValidator();

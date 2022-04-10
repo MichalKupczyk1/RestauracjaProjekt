@@ -444,3 +444,4 @@ C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Te
 C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\obj\Debug\net5.0\ref\ProjektTaiib.Tests.dll
 C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\obj\Debug\net5.0\ProjektTaiib.Tests.pdb
 C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\obj\Debug\net5.0\ProjektTaiib.Tests.genruntimeconfig.cache
+C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib.Tests\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll

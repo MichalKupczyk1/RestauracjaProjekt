@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v5.0": {
       "ProjektTaiib.Tests/1.0.0": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.15",
           "Microsoft.NET.Test.Sdk": "16.9.4",
           "Moq": "4.17.2",
           "ProjektTaiib": "1.0.0",
@@ -453,6 +454,17 @@
         }
       },
       "Microsoft.EntityFrameworkCore.Analyzers/5.0.15": {},
+      "Microsoft.EntityFrameworkCore.InMemory/5.0.15": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "5.0.15"
+        },
+        "runtime": {
+          "lib/netstandard2.1/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "5.0.15.0",
+            "fileVersion": "5.0.1522.10812"
+          }
+        }
+      },
       "Microsoft.EntityFrameworkCore.Relational/5.0.15": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.15",
@@ -2149,6 +2161,7 @@
           "AutoMapper": "11.0.1",
           "AutoMapper.Extensions.Microsoft.DependencyInjection": "11.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.15",
+          "Microsoft.EntityFrameworkCore.InMemory": "5.0.15",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.15",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "5.0.2"
         },
@@ -2324,6 +2337,13 @@
       "sha512": "sha512-QfJBhr49Jmvt+zJf1VPSBPq2ZPY5PlpiDSF3UFV37joyKiWMDyEsNTHd3RLFzagC4k8cmSKTgk+7Y49XwDvPJQ==",
       "path": "microsoft.entityframeworkcore.analyzers/5.0.15",
       "hashPath": "microsoft.entityframeworkcore.analyzers.5.0.15.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/5.0.15": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-G0M1/0ejm6RuHqRywt9bgBdOn0czWmSJBLpNyRtw0KDtBPDEVSNmXSM1a60b0r14Fd/uaPWkWFVPaHngslAiwg==",
+      "path": "microsoft.entityframeworkcore.inmemory/5.0.15",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.5.0.15.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/5.0.15": {
       "type": "package",

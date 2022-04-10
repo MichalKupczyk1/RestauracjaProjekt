@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "7TxFQkJ5xdNUi+Bepg90ctRpY9sviqOdp0hSsKXHQVqYcCmZWbUfZeDWlQ++wxbR1jIuyFyRkXTHlA6QFZz5vg==",
+  "dgSpecHash": "GFp4d4tG8Gh/SVmy1LWKe7y41hiwGKizn0+/YV2uY4okLUzmgOV7dbWBJpjmo+2e7MB9nV4Sk4jt1BOh+f23HA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\Michal\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.15\\microsoft.entityframeworkcore.abstractions.5.0.15.nupkg.sha512",
     "C:\\Users\\Michal\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.15\\microsoft.entityframeworkcore.analyzers.5.0.15.nupkg.sha512",
     "C:\\Users\\Michal\\.nuget\\packages\\microsoft.entityframeworkcore.design\\5.0.15\\microsoft.entityframeworkcore.design.5.0.15.nupkg.sha512",
+    "C:\\Users\\Michal\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.15\\microsoft.entityframeworkcore.inmemory.5.0.15.nupkg.sha512",
     "C:\\Users\\Michal\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.15\\microsoft.entityframeworkcore.relational.5.0.15.nupkg.sha512",
     "C:\\Users\\Michal\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\5.0.15\\microsoft.entityframeworkcore.sqlserver.5.0.15.nupkg.sha512",
     "C:\\Users\\Michal\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\5.0.15\\microsoft.entityframeworkcore.tools.5.0.15.nupkg.sha512",

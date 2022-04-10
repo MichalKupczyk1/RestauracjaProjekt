@@ -13,7 +13,7 @@ namespace ProjektTaiib.Tests
     public class KelnerMockTest
     {
         [Fact]
-        public void test()
+        public void veryfingDeleteKelner()
         {
             var kelner = Mock.Of<IKelnerRepository>(x => x.deleteKelner(1) == true);
             var validator = new KelnerValidator();
@@ -23,7 +23,7 @@ namespace ProjektTaiib.Tests
         }
 
         [Fact]
-        public void businessTest()
+        public void repoAndUOWMockTest()
         {
             var mockcos = Mock.Of<IKartaDanRepository>(c => c.getKartaDan(1).nazwaDania == "test");
             var uow = Mock.Of<IUnitOfWork>(c => c.KartaDan == mockcos);
@@ -31,11 +31,11 @@ namespace ProjektTaiib.Tests
         }
 
         [Fact]
-        public void mockUow()
+        public void UOWMockTestShouldBeEqual()
         {
             var mockTypDania = Mock.Of<ITypDaniaRepository>(c => c.deleteTypDania(1) == true);
             var uowTypDania = Mock.Of<IUnitOfWork>(c => c.TypDania == mockTypDania);
-            Assert.Equal(true, uowTypDania.TypDania.deleteTypDania(1));
+            Assert.True(uowTypDania.TypDania.deleteTypDania(1));
 
             var mockKelner = Mock.Of<IKelnerRepository>(c => c.getKelner(1) == new Kelner() { nazwisko = "Kowalski" });
             var uowKelner = Mock.Of<IUnitOfWork>(c => c.Kelner == mockKelner);
@@ -43,7 +43,7 @@ namespace ProjektTaiib.Tests
 
             var mockStolik = Mock.Of<IStolikRepository>(c => c.deleteStolik(1) == true);
             var uowStolik = Mock.Of<IUnitOfWork>(c => c.Stolik == mockStolik);
-            Assert.Equal(true, uowStolik.Stolik.deleteStolik(1));
+            Assert.True( uowStolik.Stolik.deleteStolik(1));
 
             var mockZamowienie = Mock.Of<IZamowienieRepository>(c => c.getZamowienie(1) == new Zamowienie() { id = 1 });
             var uowZamowienie = Mock.Of<IUnitOfWork>(c => c.Zamowienie == mockZamowienie);
