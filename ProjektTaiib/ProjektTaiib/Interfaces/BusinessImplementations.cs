@@ -140,7 +140,11 @@ namespace ProjektTaiib.Interfaces
                 unitOfWork.Complete();
             return isRemoved;
         }
-
+        public void zajmowanieIStolik(int id)
+        {
+            if (id > default(int))
+            unitOfWork.Stolik.zajmowanieRepo(id);
+        }
         public Stolik getStolik(int id)
         {
            if(id<=default(int))

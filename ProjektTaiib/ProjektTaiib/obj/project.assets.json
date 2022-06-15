@@ -7246,19 +7246,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Michal\\.nuget\\packages\\": {}
+    "C:\\Users\\Graca\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj",
+      "projectUniqueName": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj",
       "projectName": "ProjektTaiib",
-      "projectPath": "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj",
-      "packagesPath": "C:\\Users\\Michal\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Michal\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\obj\\",
+      "projectPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\ProjektTaiib.csproj",
+      "packagesPath": "C:\\Users\\Graca\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Graca\\Documents\\GitHub\\RestauracjaProjekt\\ProjektTaiib\\ProjektTaiib\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Michal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Graca\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7333,7 +7333,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.406\\RuntimeIdentifierGraph.json"
       }
     }
   }

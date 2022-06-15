@@ -99,6 +99,15 @@ namespace ProjektTaiib.Interfaces
         {
             baza.stolik.Add(stolik);
         }
+        public void zajmowanieRepo(int id)
+        {
+            
+            baza.stolik.Where(x => x.id == id).FirstOrDefault().czyZajety = !baza.stolik.Where(x => x.id == id).FirstOrDefault().czyZajety;
+            
+            Console.WriteLine("bylemTutaj");
+            baza.SaveChanges();
+           
+        }
 
         public bool deleteStolik(int id)
         { 

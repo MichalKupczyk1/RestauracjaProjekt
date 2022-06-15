@@ -12,7 +12,7 @@ namespace ProjektTaiib.Controllers
 {
     [Route("KartaDan")]
     [ApiController]
-    public class KartaDanController : ControllerBase
+    public class KartaDanController : Controller
     {
 
         private readonly IMapper mapper;

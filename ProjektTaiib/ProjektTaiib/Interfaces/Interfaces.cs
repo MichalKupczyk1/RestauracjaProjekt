@@ -26,6 +26,7 @@ namespace ProjektTaiib.Interfaces
     {
         void addStolik(Stolik stolik);
         bool deleteStolik(int id);
+        public void zajmowanieRepo(int id);
         IEnumerable<Stolik> getStoliki();
         Stolik getStolik(int id);
         void przypiszDoZamowienia(int idZamowienia,int idStolika);

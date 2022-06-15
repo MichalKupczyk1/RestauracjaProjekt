@@ -1,0 +1,36 @@
+﻿@model ProjektTaiib.ViewModels.StolikiMS
+
+
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Stoliki.First().ileMiejsc)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Stoliki.First().czyZajety)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Stoliki)
+        {
+            <tr>
+
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.ileMiejsc)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.czyZajety)
+                </td>
+                <td>
+                    <a asp-action="ZajmowanieCont" asp-route-id="@item.id">Zaznacz</a> |
+                   
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

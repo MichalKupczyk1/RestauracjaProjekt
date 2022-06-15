@@ -482,3 +482,5 @@ C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\ob
 C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.genruntimeconfig.cache
 C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\ProjektTaiib.csproj.AssemblyReference.cache
 C:\Users\Michal\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\Users\Graca\Documents\GitHub\RestauracjaProjekt\ProjektTaiib\ProjektTaiib\obj\Debug\net5.0\Razor\Views\Stolik\Index.cshtml.g.cs
