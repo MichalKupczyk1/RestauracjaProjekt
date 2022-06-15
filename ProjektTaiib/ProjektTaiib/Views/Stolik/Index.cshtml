@@ -1,11 +1,17 @@
 ﻿@model ProjektTaiib.ViewModels.StolikiMS
+@using (Html.BeginForm("Index", "Stolik", FormMethod.Get)) {
 
+        <input type="number" id="id" name="idt" value="1">
+        <input type="submit">
 
-
+    }
 
 <table class="table">
     <thead>
         <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Stoliki.First().id)
+            </th>
             <th>
                 @Html.DisplayNameFor(model => model.Stoliki.First().ileMiejsc)
             </th>
@@ -18,7 +24,9 @@
         @foreach (var item in Model.Stoliki)
         {
             <tr>
-
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
 
                 <td>
                     @Html.DisplayFor(modelItem => item.ileMiejsc)
@@ -28,9 +36,13 @@
                 </td>
                 <td>
                     <a asp-action="ZajmowanieCont" asp-route-id="@item.id">Zaznacz</a> |
-                   
                 </td>
             </tr>
         }
     </tbody>
 </table>
+
+        zajetych: @Model.iloscWolnychStolikow
+
+
+

@@ -20,47 +20,74 @@ namespace ProjektTaiib.Controllers
 
         private readonly IMapper mapper;
         private readonly IStolik blStolik;
-
+        StolikiMS mS;
         public StolikController(IMapper mapper, BLStolik stolik)
         {
             this.mapper = mapper;
             this.blStolik = stolik;
+
         }
         [HttpGet]
-        public async Task<IActionResult> Index(int id)
+        public async Task<IActionResult> Index([FromQuery(Name = "idt")] int? id)
         {
-            StolikiMS mS = new StolikiMS();
+            mS = new StolikiMS();
+            mS.ZaznaczonyId = Convert.ToInt32(id);
+            blStolik.zajmowanieIStolik(Convert.ToInt32(id));
             mS.Stoliki = blStolik.getStoliki().ToList();
-            mS.ZaznaczonyId = id;
-            blStolik.zajmowanieIStolik(id);
             mS.iloscWolnychStolikow = (int)blStolik.getStoliki().Where(i => !i.czyZajety).Count();
+
             return View(mS);
         }
-       public async Task<IActionResult> ZajmowanieCont(int id)
+        public async Task<IActionResult> ZajmowanieCont(int id)
         {
-        
-            blStolik.zajmowanieIStolik(id);
+
+            //blStolik.zajmowanieIStolik(id);
             return View();
         }
         public IEnumerable<StolikBasic> Get()
         {
             var stolik = blStolik.getStoliki();
             return mapper.Map<IEnumerable<Stolik>, IEnumerable<StolikBasic>>(stolik);
-           
-   
+
+
         }
         // GET: Stolik/5
-        [HttpGet("{stolikId}")]
+        // [HttpGet("{stolikId}")]
         public StolikBasic Get(int stolikId)
         {
+            blStolik.zajmowanieIStolik(stolikId);
+            mS.ZaznaczonyId = stolikId;
             var stolik = blStolik.getStolik(stolikId);
-            return mapper.Map<Stolik,StolikBasic>(stolik);
+            return mapper.Map<Stolik, StolikBasic>(stolik);
+        }
+        [HttpGet("{asdad}")]
+        public async Task<IActionResult> Inde2x(int? idt)
+        {
+            mS = new StolikiMS();
+            blStolik.zajmowanieIStolik(Convert.ToInt32(idt));
+            mS.Stoliki = blStolik.getStoliki().ToList();
+            mS.ZaznaczonyId = Convert.ToInt32(idt);
+       
+            mS.iloscWolnychStolikow = (int)blStolik.getStoliki().Where(i => !i.czyZajety).Count();
+
+            return View();
+
         }
 
         // POST: api/Stolik
+
         [HttpPost]
-        public void Post([FromBody] Stolik stolik)
+        public async Task<IActionResult> Index2([FromQuery(Name = "idt")] int idt)
         {
+            mS = new StolikiMS();
+         
+            blStolik.zajmowanieIStolik(Convert.ToInt32(idt));
+            mS.Stoliki = blStolik.getStoliki().ToList();
+              mS.ZaznaczonyId = Convert.ToInt32(idt);
+            
+            mS.iloscWolnychStolikow = (int)blStolik.getStoliki().Where(i => !i.czyZajety).Count();
+
+            return View();
         }
 
         // DELETE: api/ApiWithActions/5

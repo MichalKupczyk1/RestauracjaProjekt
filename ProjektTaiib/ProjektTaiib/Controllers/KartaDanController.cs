@@ -35,6 +35,7 @@ namespace ProjektTaiib.Controllers
              */
         }
         // GET: KartaDan/5
+                
         [HttpGet("{kartaDanId}")]
         public KartaDanBasic Get(int kartaDanId)
         {
