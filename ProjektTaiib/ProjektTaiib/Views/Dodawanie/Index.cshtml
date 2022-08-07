@@ -1,0 +1,92 @@
+﻿@model ProjektTaiib.ViewModels.DodajMS
+
+
+@using (Html.BeginForm("Index", "Dodawanie", FormMethod.Get))
+{
+
+    <input type="number" id="idS" name="idS" placeholder="id stolika">
+
+    <select name="idK" id="idK">
+        @foreach (var items in Model.Kelnerzy)
+        {
+            <option value="@items.id">@items.imie @items.nazwisko</option>
+        }
+
+    </select>
+
+    <select name="idD" id="idD">
+        @foreach (var items in Model.KartyDan)
+        {
+            <option value="@items.id">@items.nazwaDania</option>
+        }
+
+    </select>
+
+    <input type="submit">
+
+}
+
+<table class="table">
+    <thead>
+
+        <tr>
+            <th>
+                Id stolika
+            </th>
+            <th>
+                nazwa dania
+            </th>
+            <th>
+                rodzaj dania
+            </th>
+            <th>
+                cena
+            </th>
+            <th>
+                imie i nazwisko kelnera
+            </th>
+            <th>
+                usuwanie
+            </th>
+        </tr>
+    </thead>
+    <form asp-action="Delete">
+      
+    <tbody>
+        @foreach (var item in Model.dodajZs)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.id)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(modelItem => item.nazwa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.rodzajDania)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.cena)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.imie)
+                </td>
+                <td>
+                    @using (Html.BeginForm("Delete", "Dodawanie", FormMethod.Get))
+                    { 
+                   <input type="hidden" value="@item.id_zamowienia"  id="id" name="idd"/>
+                    <input type="submit" value="Delete" />
+                    }
+
+
+                   
+
+
+                    </td >
+                    </tr >
+}
+
+                    </form>
+</tbody>
+</table>

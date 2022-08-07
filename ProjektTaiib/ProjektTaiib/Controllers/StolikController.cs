@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace ProjektTaiib.Controllers
 {
-    [Route("Stolik")]
+    [Route("Rezerwacja")]
     [ApiController]
     public class StolikController : Controller
     {
@@ -26,14 +26,25 @@ namespace ProjektTaiib.Controllers
             this.mapper = mapper;
             this.blStolik = stolik;
 
+
         }
+
+
         [HttpGet]
-        public async Task<IActionResult> Index([FromQuery(Name = "idt")] int? id)
+        public async Task<IActionResult> Index([FromQuery(Name = "idt")] int? id, [FromQuery(Name = "idIleMiejsc")] int? idIleMiejsc)
         {
             mS = new StolikiMS();
             mS.ZaznaczonyId = Convert.ToInt32(id);
             blStolik.zajmowanieIStolik(Convert.ToInt32(id));
-            mS.Stoliki = blStolik.getStoliki().ToList();
+          
+            if (idIleMiejsc != null )
+            {
+                mS.PodanaIloscMiejsc = (int)idIleMiejsc;
+                mS.Stoliki = blStolik.getStoliki().Where(i => i.ileMiejsc >= idIleMiejsc).ToList();
+            }else {
+                mS.Stoliki = blStolik.getStoliki().ToList();
+            }
+           
             mS.iloscWolnychStolikow = (int)blStolik.getStoliki().Where(i => !i.czyZajety).Count();
 
             return View(mS);
@@ -91,7 +102,7 @@ namespace ProjektTaiib.Controllers
         }
 
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{stolikId}")]
+        [HttpDelete]
         public void Delete(int stolikId)
         {
         }

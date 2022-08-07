@@ -152,6 +152,7 @@ namespace ProjektTaiib.Interfaces
         public void addTypDania(TypDania typDania)
         {
             baza.typDania.Add(typDania);
+            
         }
 
         public bool deleteTypDania(int id)
@@ -192,7 +193,10 @@ namespace ProjektTaiib.Interfaces
         
         public void addZamowienie(Zamowienie zamowienie)
         {
+           
             baza.zamowienie.Add(zamowienie);
+            baza.SaveChanges();
+          
         }
 
         public bool deleteZamowienie(int id)
@@ -203,6 +207,7 @@ namespace ProjektTaiib.Interfaces
             if (temp != null)
             {
                 baza.zamowienie.Remove(temp);
+                baza.SaveChanges();
                 return true;
             }
             return false;

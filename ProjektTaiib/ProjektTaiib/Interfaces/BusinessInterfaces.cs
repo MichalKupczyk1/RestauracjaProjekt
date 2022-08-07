@@ -25,7 +25,10 @@ namespace ProjektTaiib.Interfaces
         IEnumerable<Zamowienie> getZamowieniaKelnera(int kelnerId);
 
     }
-
+    public interface IDodaj 
+    { 
+    
+    }
     public interface IStolik
     {
         void addStolik(Stolik stolik);

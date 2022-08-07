@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjektTaiib.Interfaces
 {
+    
     public class BLKartaDan : IKartaDan
     {
         private IUnitOfWork unitOfWork;
@@ -244,15 +245,17 @@ namespace ProjektTaiib.Interfaces
         }
         public void addZamowienie(Zamowienie zamowienie)
         {
-            if(zamowienie==null)
+          
+            if (zamowienie==null)
                 throw new InvalidOperationException("Podane zamówienie nie istnieje");
             unitOfWork.Zamowienie.addZamowienie(zamowienie);
         }
 
         public bool deleteZamowienie(int id)
         {
+            Console.WriteLine("AAAAAAAAAAAAAAA==" + id + "==AAAAAAAAAAA");
             if(id<=default(int))
-                throw new InvalidOperationException("Podane id jest nieprawidłowe");
+                throw new InvalidOperationException("Podane id jest nieprawidłowe numer id to"+ id);
             var isRemoved = unitOfWork.Zamowienie.deleteZamowienie(id);
 
             if (isRemoved)

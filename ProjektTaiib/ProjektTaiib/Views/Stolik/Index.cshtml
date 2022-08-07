@@ -1,48 +1,55 @@
 ﻿@model ProjektTaiib.ViewModels.StolikiMS
-@using (Html.BeginForm("Index", "Stolik", FormMethod.Get)) {
-
+    
+    @using (Html.BeginForm("Index", "Stolik", FormMethod.Get))
+    {
+<label>Który stolik zajmujemy/zwalniamy:</label>
         <input type="number" id="id" name="idt" value="1">
         <input type="submit">
 
     }
+  
+    @using (Html.BeginForm("Index", "Stolik", FormMethod.Get))
+    {
+<label>  Ile miejsc szukamy:</label>
+        <input type="number" id="idIleMiejsc" name="idIleMiejsc" value="@Model.PodanaIloscMiejsc">
+        <input type="submit">
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Stoliki.First().id)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Stoliki.First().ileMiejsc)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Stoliki.First().czyZajety)
-            </th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var item in Model.Stoliki)
-        {
+    }
+    <table class="table">
+        <thead>
             <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.id)
-                </td>
-
-                <td>
-                    @Html.DisplayFor(modelItem => item.ileMiejsc)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.czyZajety)
-                </td>
-                <td>
-                    <a asp-action="ZajmowanieCont" asp-route-id="@item.id">Zaznacz</a> |
-                </td>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stoliki.First().id)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stoliki.First().ileMiejsc)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Stoliki.First().czyZajety)
+                </th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Stoliki)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
 
-        zajetych: @Model.iloscWolnychStolikow
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ileMiejsc)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.czyZajety)
+                    </td>
+
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    Ilość wolnych stolików: @Model.iloscWolnychStolikow
 
 
 
