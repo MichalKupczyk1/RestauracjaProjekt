@@ -58,6 +58,7 @@ namespace ProjektTaiib.Interfaces
         void przypiszZamowienieDoStolika(int idZamowienie, int idStolik);
         void przypiszZamowienieDoKelnera(int idZamowienie, int idKelner);
         void przypiszZamowienieDoKartyDan(int idZamowienie, int idKartaDan);
+    
     }
 
 }

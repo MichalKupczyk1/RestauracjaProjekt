@@ -50,7 +50,7 @@
             </th>
         </tr>
     </thead>
-    <form asp-action="Delete">
+    
       
     <tbody>
         @foreach (var item in Model.dodajZs)
@@ -73,20 +73,14 @@
                     @Html.DisplayFor(modelItem => item.imie)
                 </td>
                 <td>
-                    @using (Html.BeginForm("Delete", "Dodawanie", FormMethod.Get))
+                    @using (Html.BeginForm("Index", "Dodawanie", FormMethod.Get))
                     { 
-                   <input type="hidden" value="@item.id_zamowienia"  id="id" name="idd"/>
+                   <input type="hidden" value="@item.id_zamowienia"  id="idDel" name="idDel"/>
                     <input type="submit" value="Delete" />
                     }
-
-
-                   
-
-
                     </td >
                     </tr >
 }
 
-                    </form>
 </tbody>
 </table>

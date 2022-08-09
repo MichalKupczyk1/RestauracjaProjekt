@@ -1,0 +1,64 @@
+﻿@model ProjektTaiib.ViewModels.PlacenieMS
+
+
+@using (Html.BeginForm("Index", "Placenie", FormMethod.Get))
+{
+    <input type="number" id="IdStolika" name="IdStolika" placeholder="id stolika">
+    <input type="submit">
+}
+
+<table class="table">
+    <thead>
+
+        <tr>
+            <th>
+                Id Zamowienia
+            </th>
+            <th>
+                nazwa dania
+            </th>
+            <th>
+                rodzaj dania
+            </th>
+            <th>
+                cena
+            </th>
+        </tr>
+    </thead>
+
+
+    <tbody>
+        @if (Model.Zamowienia.Count() != 0)
+            @foreach (var item in Model.Zamowienia)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.id)
+                    </td>
+
+                    <td>
+                        @Html.DisplayFor(modelItem => item.nazwaDania)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.rodzajDania)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.cena)
+                    </td>
+                    <td>
+                    </td>
+                    <td>
+
+                </tr>
+            }
+
+
+    </tbody>
+</table>
+<label>Suma do zapłaty:  @Model.Suma</label>
+
+@using (Html.BeginForm("Index", "Placenie", FormMethod.Get))
+{
+    <input type="number" id="IdUsuwanie" name="IdUsuwanie" placeholder="id usuwania">
+    <input type="submit">
+}

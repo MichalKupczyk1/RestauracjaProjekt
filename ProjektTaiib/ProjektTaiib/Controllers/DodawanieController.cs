@@ -36,7 +36,15 @@ namespace ProjektTaiib.Controllers
         public async Task<IActionResult> Index(
             [FromQuery(Name = "idS")] int? idS,
             [FromQuery(Name = "idK")] int? idK, 
-            [FromQuery(Name = "idD")] int? idD){
+            [FromQuery(Name = "idD")] int? idD,
+            [FromQuery(Name = "idDel")] int? idDel)
+        {
+
+            if (idDel != null)
+            {
+                blZamowienie.deleteZamowienie((int)idDel);
+            }
+
             dM = new DodajMS();
             dM.aaa += "1";
             if (idS != null && idK != null && idD != null) {
