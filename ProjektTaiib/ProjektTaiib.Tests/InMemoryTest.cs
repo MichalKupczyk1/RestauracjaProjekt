@@ -1,18 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Diagnostics;
+using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Xunit;
 
 namespace ProjektTaiib.Models
 {
+    [TestFixture]
     public class InMemoryTest
     {
         private DbContextOptions<Restauracja> _contextOptions;
 
-        [Fact]
+        [Test]
         public void testInMemoryAddKelnerToTheDatabaseShouldBeEqual()
         {
             _contextOptions = new DbContextOptionsBuilder<Restauracja>()
@@ -34,7 +35,7 @@ namespace ProjektTaiib.Models
 
             Kelner test = context.kelner.Where(e => e.nazwisko == "Ronaldo").FirstOrDefault();
 
-            Assert.Equal("Ronaldo",test.nazwisko);
+            Assert.AreEqual("Ronaldo",test.nazwisko);
         }
     }
 }

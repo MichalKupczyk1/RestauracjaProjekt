@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xunit;
+using NUnit;
+using NUnit.Framework;
+
 namespace ProjektTaiib.Tests
 {
-  
+
+    [TestFixture]
     public class DummyTest
     {
-        [Fact]
+        [Test]
         public void BLKartaDanNullKonstruktor() {
             UnitOfWork uow = null;
            Assert.Throws<ArgumentNullException>(() => new BLKartaDan(uow));

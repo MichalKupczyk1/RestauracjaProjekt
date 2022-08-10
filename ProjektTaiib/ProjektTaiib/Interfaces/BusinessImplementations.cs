@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjektTaiib.Interfaces
 {
-    
+
     public class BLKartaDan : IKartaDan
     {
         private IUnitOfWork unitOfWork;
@@ -53,10 +53,10 @@ namespace ProjektTaiib.Interfaces
     }
 
     public class BLKelner : IKelner
-     {
-        private UnitOfWork unitOfWork;
+    {
+        private IUnitOfWork unitOfWork;
 
-        public BLKelner(UnitOfWork uow)
+        public BLKelner(IUnitOfWork uow)
         {
             this.unitOfWork = uow;
         }
@@ -93,10 +93,10 @@ namespace ProjektTaiib.Interfaces
 
         public IEnumerable<Zamowienie> getZamowieniaKelnera(int kelnerId)
         {
-          //  if (kelnerId <= default(int))
-         //       throw new InvalidOperationException("Podane id jest nieprawidłowe");
+            //  if (kelnerId <= default(int))
+            //       throw new InvalidOperationException("Podane id jest nieprawidłowe");
 
-            if(unitOfWork.Kelner.getKelner(kelnerId)==null)
+            if (unitOfWork.Kelner.getKelner(kelnerId) == null)
                 throw new InvalidOperationException("Dany kelner nie istnieje");
 
             return unitOfWork.Kelner.getZamowieniaKelnera(kelnerId);
@@ -104,13 +104,13 @@ namespace ProjektTaiib.Interfaces
 
         public void przypiszDoZamowienia(int idZamowienia, int idKelnera)
         {
-            if(idKelnera<=default(int))
+            if (idKelnera <= default(int))
                 throw new InvalidOperationException("Podane id kelnera jest nieprawidłowe");
-            if(idZamowienia<=default(int))
+            if (idZamowienia <= default(int))
                 throw new InvalidOperationException("Podane id zamowienia jest nieprawidłowe");
-            if(unitOfWork.Kelner.getKelner(idKelnera)==null)
+            if (unitOfWork.Kelner.getKelner(idKelnera) == null)
                 throw new InvalidOperationException("Dany kelner nie istnieje");
-            if(unitOfWork.Zamowienie.getZamowienie(idZamowienia)==null)
+            if (unitOfWork.Zamowienie.getZamowienie(idZamowienia) == null)
                 throw new InvalidOperationException("Dane zamowienie nie istnieje");
 
             unitOfWork.Kelner.przypiszDoZamowienia(idZamowienia, idKelnera);
@@ -127,14 +127,14 @@ namespace ProjektTaiib.Interfaces
         }
         public void addStolik(Stolik stolik)
         {
-            if(stolik==null)
+            if (stolik == null)
                 throw new InvalidOperationException("Podany stolik nie istnieje");
             unitOfWork.Stolik.addStolik(stolik);
         }
 
         public bool deleteStolik(int id)
         {
-            if(id<=default(int))
+            if (id <= default(int))
                 throw new InvalidOperationException("Podane id jest nieprawidłowe");
             var isRemoved = unitOfWork.Stolik.deleteStolik(id);
             if (isRemoved)
@@ -144,11 +144,11 @@ namespace ProjektTaiib.Interfaces
         public void zajmowanieIStolik(int id)
         {
             if (id > default(int))
-            unitOfWork.Stolik.zajmowanieRepo(id);
+                unitOfWork.Stolik.zajmowanieRepo(id);
         }
         public Stolik getStolik(int id)
         {
-           if(id<=default(int))
+            if (id <= default(int))
                 throw new InvalidOperationException("Podane id jest nieprawidłowe");
             return unitOfWork.Stolik.getStolik(id);
         }
@@ -160,9 +160,9 @@ namespace ProjektTaiib.Interfaces
 
         public IEnumerable<Zamowienie> getZamowieniaStolika(int stolikId)
         {
-            if(stolikId<=default(int))
+            if (stolikId <= default(int))
                 throw new InvalidOperationException("Podane id jest nieprawidłowe");
-            if(unitOfWork.Stolik.getStolik(stolikId)==null)
+            if (unitOfWork.Stolik.getStolik(stolikId) == null)
                 throw new InvalidOperationException("Dany stolik nie istnieje");
 
             return unitOfWork.Stolik.getZamowieniaStolika(stolikId);
@@ -171,13 +171,13 @@ namespace ProjektTaiib.Interfaces
 
         public void przypiszDoZamowienia(int idZamowienia, int idStolika)
         {
-            if(idZamowienia<=default(int))
+            if (idZamowienia <= default(int))
                 throw new InvalidOperationException("Podane id zamowienia jest nieprawidłowe");
-            if(idStolika<=default(int))
+            if (idStolika <= default(int))
                 throw new InvalidOperationException("Podane id stolika jest nieprawidłowe");
-            if(unitOfWork.Stolik.getStolik(idStolika)==null)
+            if (unitOfWork.Stolik.getStolik(idStolika) == null)
                 throw new InvalidOperationException("Dany stolik nie istnieje");
-            if(unitOfWork.Zamowienie.getZamowienie(idZamowienia)==null)
+            if (unitOfWork.Zamowienie.getZamowienie(idZamowienia) == null)
                 throw new InvalidOperationException("Dane zamowienie nie istnieje");
 
             unitOfWork.Stolik.przypiszDoZamowienia(idZamowienia, idStolika);
@@ -194,14 +194,14 @@ namespace ProjektTaiib.Interfaces
         }
         public void addTypDania(TypDania typDania)
         {
-            if(typDania==null)
+            if (typDania == null)
                 throw new InvalidOperationException("Dany typ dania jest nieprawidłowy");
             unitOfWork.TypDania.addTypDania(typDania);
         }
 
         public bool deleteTypDania(int id)
         {
-            if(id<=default(int))
+            if (id <= default(int))
                 throw new InvalidOperationException("Podane id jest nieprawidłowe");
             var isRemoved = unitOfWork.TypDania.deleteTypDania(id);
             if (isRemoved)
@@ -211,7 +211,7 @@ namespace ProjektTaiib.Interfaces
 
         public TypDania getTypDania(int id)
         {
-            if(id<=default(int))
+            if (id <= default(int))
                 throw new InvalidOperationException("Podane id jest nieprawidłowe");
             return unitOfWork.TypDania.getTypDania(id);
         }
@@ -223,13 +223,13 @@ namespace ProjektTaiib.Interfaces
 
         public void przypiszDoKartyDan(int idTypu, int idKarty)
         {
-           if(idKarty<=default(int))
+            if (idKarty <= default(int))
                 throw new InvalidOperationException("Podane id karty jest nieprawidłowe");
-           if(idTypu<=default(int))
+            if (idTypu <= default(int))
                 throw new InvalidOperationException("Podane id typu jest nieprawidłowe");
-           if(unitOfWork.KartaDan.getKartaDan(idKarty)==null)
+            if (unitOfWork.KartaDan.getKartaDan(idKarty) == null)
                 throw new InvalidOperationException("Dana karta nie istnieje");
-           if(unitOfWork.TypDania.getTypDania(idTypu)==null)
+            if (unitOfWork.TypDania.getTypDania(idTypu) == null)
                 throw new InvalidOperationException("Dany typ dania nie istnieje");
             unitOfWork.TypDania.przypiszDoKartyDan(idTypu, idKarty);
         }
@@ -245,8 +245,8 @@ namespace ProjektTaiib.Interfaces
         }
         public void addZamowienie(Zamowienie zamowienie)
         {
-          
-            if (zamowienie==null)
+
+            if (zamowienie == null)
                 throw new InvalidOperationException("Podane zamówienie nie istnieje");
             unitOfWork.Zamowienie.addZamowienie(zamowienie);
         }
@@ -254,8 +254,8 @@ namespace ProjektTaiib.Interfaces
         public bool deleteZamowienie(int id)
         {
             Console.WriteLine("AAAAAAAAAAAAAAA==" + id + "==AAAAAAAAAAA");
-            if(id<=default(int))
-                throw new InvalidOperationException("Podane id jest nieprawidłowe numer id to"+ id);
+            if (id <= default(int))
+                throw new InvalidOperationException("Podane id jest nieprawidłowe numer id to" + id);
             var isRemoved = unitOfWork.Zamowienie.deleteZamowienie(id);
 
             if (isRemoved)
@@ -270,20 +270,20 @@ namespace ProjektTaiib.Interfaces
 
         public Zamowienie getZamowienie(int id)
         {
-            if(id<=default(int))
+            if (id <= default(int))
                 throw new InvalidOperationException("Podane id jest nieprawidłowe");
             return unitOfWork.Zamowienie.getZamowienie(id);
         }
 
         public void przypiszZamowienieDoKartyDan(int idZamowienie, int idKartaDan)
         {
-            if(idKartaDan<=default(int))
+            if (idKartaDan <= default(int))
                 throw new InvalidOperationException("Podane id karty dań jest nieprawidłowe");
-            if(idZamowienie<=default(int))
+            if (idZamowienie <= default(int))
                 throw new InvalidOperationException("Podane id zamówienia jest nieprawidłowe");
-            if(unitOfWork.Zamowienie.getZamowienie(idZamowienie)==null)
+            if (unitOfWork.Zamowienie.getZamowienie(idZamowienie) == null)
                 throw new InvalidOperationException("Podane zamówienie nie istnieje");
-            if(unitOfWork.KartaDan.getKartaDan(idKartaDan)==null)
+            if (unitOfWork.KartaDan.getKartaDan(idKartaDan) == null)
                 throw new InvalidOperationException("Podana karta dań nie istnieje");
             unitOfWork.Zamowienie.przypiszZamowienieDoKartyDan(idZamowienie, idKartaDan);
         }

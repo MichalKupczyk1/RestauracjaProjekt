@@ -14,7 +14,6 @@ namespace ProjektTaiib.Controllers
     [ApiController]
     public class KartaDanController : Controller
     {
-
         private readonly IMapper mapper;
         private readonly IKartaDan BLKartaDan;
 
@@ -35,13 +34,12 @@ namespace ProjektTaiib.Controllers
              */
         }
         // GET: KartaDan/5
-                
+
         [HttpGet("{kartaDanId}")]
         public KartaDanBasic Get(int kartaDanId)
         {
-                var kartaDan = BLKartaDan.getKartaDan(kartaDanId);
-                return mapper.Map<KartaDan, KartaDanBasic>(kartaDan);
-           
+            var kartaDan = BLKartaDan.getKartaDan(kartaDanId);
+            return mapper.Map<KartaDan, KartaDanBasic>(kartaDan);
         }
 
 

@@ -59,9 +59,8 @@ namespace ProjektTaiib.Controllers
         {
             var stolik = blStolik.getStoliki();
             return mapper.Map<IEnumerable<Stolik>, IEnumerable<StolikBasic>>(stolik);
-
-
         }
+
         // GET: Stolik/5
         // [HttpGet("{stolikId}")]
         public StolikBasic Get(int stolikId)
@@ -82,7 +81,6 @@ namespace ProjektTaiib.Controllers
             mS.iloscWolnychStolikow = (int)blStolik.getStoliki().Where(i => !i.czyZajety).Count();
 
             return View();
-
         }
 
         // POST: api/Stolik

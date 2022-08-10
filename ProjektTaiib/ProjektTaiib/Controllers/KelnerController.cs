@@ -14,7 +14,6 @@ namespace ProjektTaiib.Controllers
     [ApiController]
     public class KelnerController : ControllerBase
     {
-
         private readonly IMapper mapper;
         private readonly IKelner blKelner;
 
@@ -39,7 +38,7 @@ namespace ProjektTaiib.Controllers
         [HttpGet("{kelnerId}")]
         public KelnerBasic Get(int kelnerId)
         {
-             var kelnerzy = blKelner.getKelner(kelnerId);
+            var kelnerzy = blKelner.getKelner(kelnerId);
             return mapper.Map<Kelner, KelnerBasic>(kelnerzy);
 
             // var kelnerzy = blKelner.getZamowieniaKelnera(kelnerId);

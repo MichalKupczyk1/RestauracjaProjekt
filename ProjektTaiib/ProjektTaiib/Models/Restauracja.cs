@@ -28,9 +28,7 @@ namespace ProjektTaiib.Models
             if (!optionsBuilder.IsConfigured)
             {
                 optionsBuilder
-                   .UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=dbRestauracja;
-                                Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;
-                                ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
+                   .UseSqlServer(@"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=Restauracja;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
     }

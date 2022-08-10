@@ -21,6 +21,7 @@ namespace ProjektTaiib.Controllers
         private readonly ITypDania blTypDania;
         private readonly IZamowienie blZamowienie;
         DodajMS dM;
+
         public DodawanieController(IMapper mapper, BLStolik stolik,BLKartaDan kartaDan, BLKelner kelner,BLTypDania typDania,BLZamowienie zamowienie)
         {
             this.mapper = mapper;
@@ -67,7 +68,7 @@ namespace ProjektTaiib.Controllers
                     nazwa = blkartaDan.GetKartyDan().FirstOrDefault(e => e.id == i.id_kartaDan).nazwaDania,
                     rodzajDania = blTypDania.getTypyDania().FirstOrDefault(e => e.id == blkartaDan.GetKartyDan().FirstOrDefault(e => e.id == i.id_kartaDan).id_typDania).nazwaTypu,
                     cena = blkartaDan.GetKartyDan().FirstOrDefault(e => e.id == i.id_kartaDan).cena,
-                    imie = blKelner.getKelnerzy().FirstOrDefault(e => e.id == i.id_kartaDan).imie + " " + blKelner.getKelnerzy().FirstOrDefault(e => e.id == i.id_kartaDan).nazwisko,
+                    imie = blKelner.getKelnerzy().FirstOrDefault(e => e.id == i.id_kelner).imie + " " + blKelner.getKelnerzy().FirstOrDefault(e => e.id == i.id_kelner).nazwisko,
                     id_zamowienia = i.id
                 });
             });
@@ -77,11 +78,10 @@ namespace ProjektTaiib.Controllers
             
             return View(dM);
         }
+
         [HttpPost, ActionName("Delete")]
         public RedirectToActionResult Delete([FromQuery(Name = "id")]  int id)
         {
-
-
             int i = id;
             blZamowienie.deleteZamowienie(id);
             return RedirectToAction("Index", "Dodawanie");

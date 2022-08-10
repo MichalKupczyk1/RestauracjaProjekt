@@ -11,6 +11,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
+using ProjektTaiib.Mapper;
+
 namespace ProjektTaiib
 {
     public class Startup
@@ -39,7 +41,6 @@ namespace ProjektTaiib
             services.AddTransient<BLKartaDan>(_ => new BLKartaDan(uow));
             services.AddTransient<BLStolik>(_ => new BLStolik(uow));
             services.AddTransient<BLTypDania>(_ => new BLTypDania(uow));
-           
 
             services.AddControllersWithViews();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

@@ -1,17 +1,18 @@
 ﻿using Moq;
+using NUnit.Framework;
 using ProjektTaiib.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xunit;
 
 namespace ProjektTaiib.Tests
 {
+    [TestFixture]
     public class KelnerStubTest
     {
-        [Fact]
+        [Test]
         public void checkingIfKelnerGotDeleted()
         {
             var kelner = Mock.Of<IKelnerRepository>(c => c.deleteKelner(1)==true);
